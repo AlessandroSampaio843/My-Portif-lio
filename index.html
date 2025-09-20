@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Site do portfólio</title>
+</head>
+<body>
+    <div class="background">
+        <nav>
+            <a href="#" class="logo">Portifólio</a>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#SobreMim">Sobre Mim</a></li>
+                <li><a href="#Servicos">Serviços</a></li>
+                <li><a href="#Contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="main" id="Inicio"> 
+            <h4>Olá, meu nome é</h4>
+            <h1>Alessandro Sampaio</h1>
+            <h4>Engenheiro de Software</h4>
+            <h4>Podemos nos conhecer melhor?</h4>
+        </div>
+    </div>
+    
+    <section class="background-about" id="SobreMim">
+        <div class="main-about">
+            <img src="img/Profile.jpg.jpg" alt="imagem de perfil">
+            <div class="text-about">
+                <h2>Sobre Mim</h2>
+                <h5>Estudante de Engenharia de Software</h5>
+                <p>Sou estudante de Engenharia de Software, com foco em desenvolvimento de soluções práticas e criativas para problemas reais. Atualmente, possuo três projetos em meu portfólio, que demonstram habilidades em programação, design de sistemas e boas práticas de desenvolvimento. Cada projeto reflete meu aprendizado em diferentes áreas da tecnologia, desde a construção de aplicações funcionais até a organização do código e uso de metodologias ágeis. Estou em constante evolução, buscando ampliar meus conhecimentos e aplicar inovação em meus trabalhos.</p>
+                <a href="https://www.linkedin.com/in/ale-sampaio-599ab922b" target="_blank" class="btn">Meu Linkedin</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-services" id="Servicos">
+        <div class="title">
+            <h2>Minhas Habilidades</h2>   
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Desenvolvedor Python</h5>
+                <div class="paragraph-btn">
+                    <p>Gostaria de um Desenvolvedor Python?</p>
+                    <a href="https://github.com/AlessandroSampaio843" class="btn decoration">Você pode saber mais sobre aqui!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-me" id="Contato">
+        <p>Podemos Conversar?</p>
+        <a href="https://w.app/c02euz" class="btn decoration">Enviar Mensagem</a>
+        <form class="form-contato" action="https://formsubmit.co/alessandrosampaio843@gmail.com" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <button type="submit" class="btn btn-vermelho">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <footer>
+        <h6>Alessandro Sampaio</h6>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/ale-sampaio-599ab922b" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ale_sampaio_sa?igsh=dnY5dmFweTZ4b2to&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="end">Copyright by Alessandro Sampaio</p>
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".form-contato");
+    const confirmation = document.createElement("div");
+    confirmation.style.display = "none";
+    confirmation.style.background = "#191919";
+    confirmation.style.color = "#fff";
+    confirmation.style.padding = "20px";
+    confirmation.style.borderRadius = "10px";
+    confirmation.style.marginTop = "15px";
+    confirmation.style.textAlign = "center";
+    confirmation.textContent = "Mensagem enviada com sucesso! Obrigado pelo contato.";
+
+    form.parentNode.insertBefore(confirmation, form.nextSibling);
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                form.reset();
+                confirmation.style.display = "block";
+            } else {
+                confirmation.textContent = "Ocorreu um erro ao enviar. Tente novamente.";
+                confirmation.style.display = "block";
+            }
+        })
+        .catch(() => {
+            confirmation.textContent = "Ocorreu um erro ao enviar. Tente novamente.";
+            confirmation.style.display = "block";
+        });
+    });
+});
+</script>
+</body>
+</html>

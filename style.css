@@ -1,0 +1,406 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.background {
+    background-image: url(img/Background.jpg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.caption {
+    color: white;
+    margin: 20px 0 20px;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #707070;
+    transition: .4s;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: white;
+    margin: 20px 0 20px;
+    font-size: 75px;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: #fcfcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.background-about {
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.background-about img {
+    border-radius: 50%;
+    display: flex;
+    height: 430px;
+    width: 430px;
+}
+
+.text-about {
+    width: 550px;
+}
+
+.main-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1130px;
+    margin: 0 auto;
+}
+
+.text-about h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.text-about h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.text-about p {
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.btn {
+    background-color: #f9004d;
+    color: white;
+    text-transform: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.container-services {
+    background-color: black;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.title h2 {
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #191919;
+    height: 365px;
+    width: 335px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: #f9004d;
+}
+
+h5 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.paragraph-btn {
+    color: #fcfcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.paragraph-btn .btn {
+    margin-top: 18px;
+    padding: 01px 10px;
+}
+
+.contact-me {
+    width: 100%;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-me p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h6 {
+    font-size: 35px;
+    color: white;
+}
+
+footer p {
+    color: white;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    background-color: #f9004d;
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.end {
+    position: absolute;
+    color: #f9004d;
+    bottom: 35px;
+    font-size: 14px;
+}
+
+.decoration {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsividade básica */
+@media (max-width: 900px) {
+    .main-about, .title h2 {
+        width: 95vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    .background-about img {
+        width: 250px;
+        height: 250px;
+    }
+    .text-about {
+        width: 90vw;
+    }
+    .box {
+        flex-direction: column;
+    }
+    .card {
+        width: 90vw;
+        margin: 10px auto;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+    .main {
+        left: 5%;
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .background {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Animação suave nos cards e botões */
+.card, .btn, .social-media a {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 24px rgba(249,0,77,0.2);
+    transform: translateY(-5px) scale(1.03);
+}
+.btn:hover, .social-media a:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Formulário de contato */
+.form-contato {
+    background: #191919;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    width: 350px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-contato label {
+    color: #fff;
+    font-size: 1em;
+}
+.form-contato input, .form-contato textarea {
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    background: #101010;
+    color: #fff;
+}
+.form-contato input:focus, .form-contato textarea:focus {
+    outline: 2px solid #f9004d;
+}
+.form-contato button {
+    background: #f9004d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.form-contato button:hover {
+    background: #d1003a;
+}
+
+.btn-vermelho {
+    background-color: #f9004d;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(249,0,77,0.15);
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.btn-vermelho:hover {
+    background-color: #d1003a;
+    transform: scale(1.05);
+}
